@@ -87,7 +87,7 @@
 	    _this.state = {
 	      voice: ['Zosia'],
 	      players: [],
-	      loggedIn: true
+	      loggedIn: false
 	    };
 	    return _this;
 	  }
@@ -21647,7 +21647,7 @@
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var randomTime = function randomTime() {
-	  return 10 * Math.random() * 900;
+	  return 10 * Math.random() * 500;
 	};
 
 	document.addEventListener('contextmenu', function (event) {
@@ -21684,7 +21684,7 @@
 	    key: 'setClickTimer',
 	    value: function setClickTimer() {
 	      setTimeout(function () {
-	        if (this.state.text.length > 0 && this.state.mouseOver) {
+	        if (this.state.mouseOver) {
 	          this.state.clickTimer = 0;
 	        } else {
 	          this.setClickTimer();
@@ -21697,7 +21697,8 @@
 	      setTimeout(function () {
 	        this.currentWord('space');
 	        this.setSpaceTimer();
-	      }.bind(this), randomTime() * 5);
+	        this.forceUpdate();
+	      }.bind(this), randomTime() * 10);
 	    }
 	  }, {
 	    key: 'setClearscreenTimer',
@@ -21707,10 +21708,11 @@
 	          this.currentWord('clearscreen');
 	          this.state.text = '';
 	          this.setClearscreenTimer();
+	          this.forceUpdate();
 	        } else {
 	          this.setClearscreenTimer();
 	        }
-	      }.bind(this), randomTime() * 20);
+	      }.bind(this), randomTime() * 30);
 	    }
 	  }, {
 	    key: 'pushNamesToDictionary',
@@ -21950,6 +21952,11 @@
 	      return _react2.default.createElement(
 	        'div',
 	        { className: 'keyboard' },
+	        _react2.default.createElement(
+	          'marquee',
+	          { id: 'introMarquee', behavior: 'scroll', direction: 'left' },
+	          'ask the matrix a question. hover on the keys with you and your friends to channel the matrix. '
+	        ),
 	        _react2.default.createElement(
 	          'div',
 	          { id: 'textArea', className: 'textArea' },

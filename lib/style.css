@@ -33,7 +33,8 @@ to {background-position: 0 90000px ;}
   font-size: 30px;
   color:black;
   text-shadow: 3px 3px white;
-  margin-bottom: 20px;
+  margin-top: -20px;
+  margin-bottom: 5px;
   /*transform: rotate(-90deg);*/
 }
 
@@ -275,8 +276,6 @@ to{
   font-size: 35px;
   line-height: 20px;
 }
-
-
 
 #addPlayerBox {
   position: absolute;

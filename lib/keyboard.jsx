@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import Store from './store'
 
 const randomTime = function () {
-  return 10 * Math.random() * 900
+  return 10 * Math.random() * 500
 }
 
 document.addEventListener('contextmenu', event => event.preventDefault())
@@ -31,7 +31,7 @@ class Keyboard extends React.Component {
 
   setClickTimer () {
       setTimeout(function(){
-        if (this.state.text.length > 0 && this.state.mouseOver) {
+        if (this.state.mouseOver) {
           this.state.clickTimer = 0
         } else {
           this.setClickTimer()
@@ -43,7 +43,8 @@ class Keyboard extends React.Component {
       setTimeout(function(){
           this.currentWord('space')
           this.setSpaceTimer()
-      }.bind(this), randomTime() * 5)
+          this.forceUpdate()
+      }.bind(this), randomTime() * 10)
   }
 
   setClearscreenTimer () {
@@ -52,10 +53,11 @@ class Keyboard extends React.Component {
           this.currentWord('clearscreen')
           this.state.text = ''
           this.setClearscreenTimer()
+          this.forceUpdate()
         } else {
           this.setClearscreenTimer()
         }
-      }.bind(this), randomTime() * 20)
+      }.bind(this), randomTime() * 30)
   }
 
   pushNamesToDictionary (players) {
@@ -281,6 +283,8 @@ class Keyboard extends React.Component {
 
     return (
       <div className="keyboard">
+        <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix a question. hover on the keys with you and your friends to channel the matrix. </marquee>
+
         <div id="textArea" className = "textArea" >
           <div className = "bodyText">{this.state.text}</div>
         </div>

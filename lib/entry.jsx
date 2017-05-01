@@ -10,7 +10,7 @@ class Entry extends React.Component {
     this.state = {
       voice: ['Zosia'],
       players: [],
-      loggedIn: true
+      loggedIn: false
     }
   }
 
