@@ -33,7 +33,8 @@ updateForm(field) {
 onSubmit(e) {
   e.preventDefault()
   Store.addPlayer(this.state.form)
-  this.props.entry.state.players.push(this.state.form['firstName'])
+  let trimmedString = this.state.form['firstName'].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+  this.props.entry.state.players.push(trimmedString)
   this.setState({form: {['firstName']: ''}})
   this.forceUpdate()
 

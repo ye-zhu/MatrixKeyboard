@@ -21911,8 +21911,9 @@
 	    key: 'addPlayerFromBox',
 	    value: function addPlayerFromBox(e) {
 	      e.preventDefault();
-	      this.state.players.push(this.state.form['firstName']);
-	      this.pushNamesToDictionary([this.state.form['firstName']]);
+	      var trimmedString = this.state.form['firstName'].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+	      this.state.players.push(trimmedString);
+	      this.pushNamesToDictionary([trimmedString]);
 	      this.setState({ form: _defineProperty({}, 'firstName', '') });
 	      this.state.addPlayerBox = false;
 	      this.forceUpdate();
@@ -21955,7 +21956,7 @@
 	        _react2.default.createElement(
 	          'marquee',
 	          { id: 'introMarquee', behavior: 'scroll', direction: 'left' },
-	          'ask the matrix a question. hover on the keys with you and your friends to channel the matrix. '
+	          'ask the matrix. hover over the keys to channel its reponse. space = new word. clearscreen sentence = new phrase. '
 	        ),
 	        _react2.default.createElement(
 	          'div',
@@ -22190,7 +22191,8 @@
 	    value: function onSubmit(e) {
 	      e.preventDefault();
 	      _store2.default.addPlayer(this.state.form);
-	      this.props.entry.state.players.push(this.state.form['firstName']);
+	      var trimmedString = this.state.form['firstName'].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+	      this.props.entry.state.players.push(trimmedString);
 	      this.setState({ form: _defineProperty({}, 'firstName', '') });
 	      this.forceUpdate();
 	    }

@@ -248,8 +248,9 @@ class Keyboard extends React.Component {
 
   addPlayerFromBox (e) {
     e.preventDefault()
-    this.state.players.push(this.state.form['firstName'])
-    this.pushNamesToDictionary([this.state.form['firstName']])
+    let trimmedString = this.state.form['firstName'].replace(/^\s\s*/, '').replace(/\s\s*$/, '');
+    this.state.players.push(trimmedString)
+    this.pushNamesToDictionary([trimmedString])
     this.setState({ form: {['firstName']:''}})
     this.state.addPlayerBox = false
     this.forceUpdate()
@@ -283,7 +284,7 @@ class Keyboard extends React.Component {
 
     return (
       <div className="keyboard">
-        <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix a question. hover on the keys with you and your friends to channel the matrix. </marquee>
+        <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix. hover over the keys to channel its reponse. space = new word. clearscreen sentence = new phrase. </marquee>
 
         <div id="textArea" className = "textArea" >
           <div className = "bodyText">{this.state.text}</div>
