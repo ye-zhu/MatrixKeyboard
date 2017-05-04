@@ -5,18 +5,11 @@ const Asteroid = require('./asteroid')
 const Explosion = require('./explosion')
 const Description = require('./description')
 
-const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
 
-canvas.width = document.body.clientWidth;
-canvas.height = document.body.clientHeight;
-context.font = "18px monospace";
-context.fillStyle = "#32CD32";
-context.strokeStyle = "#ffffff";
 
 class Game {
   constructor (params) {
-    this.context = context;
+    this.context = params.context;
     this.ship = [];
     this.bullets = [];
     this.asteroids = [];

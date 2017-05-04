@@ -48,24 +48,25 @@
 	const Images = __webpack_require__(3)
 	
 	
-	// let canvas = document.getElementById('canvas');
-	// let context = canvas.getContext('2d');
-	//
-	// canvas.width = document.body.clientWidth;
-	// canvas.height = document.body.clientHeight;
-	// context.font = "18px monospace";
-	// context.fillStyle = "#32CD32";
-	// context.strokeStyle = "#ffffff";
+	let canvas = document.getElementById('myCanvas');
+	let context = canvas.getContext('2d');
+	
+	canvas.width = document.body.clientWidth;
+	canvas.height = document.body.clientHeight;
+	context.font = "18px monospace";
+	context.fillStyle = "#32CD32";
+	context.strokeStyle = "#ffffff";
 	
 	
 	
 	let startGame = function () {
 	    new Game({
+	    context:context
 	  })
 	}
 	
 	Images.loadImages(startGame)
-	// context.fillText("LOADING...", canvas.width/2 - 50, canvas.height/2);
+	context.fillText("LOADING...", canvas.width/2 - 50, canvas.height/2);
 
 
 /***/ },
@@ -79,18 +80,11 @@
 	const Explosion = __webpack_require__(8)
 	const Description = __webpack_require__(9)
 	
-	const canvas = document.getElementById('canvas');
-	const context = canvas.getContext('2d');
 	
-	canvas.width = document.body.clientWidth;
-	canvas.height = document.body.clientHeight;
-	context.font = "18px monospace";
-	context.fillStyle = "#32CD32";
-	context.strokeStyle = "#ffffff";
 	
 	class Game {
 	  constructor (params) {
-	    this.context = context;
+	    this.context = params.context;
 	    this.ship = [];
 	    this.bullets = [];
 	    this.asteroids = [];
@@ -836,7 +830,7 @@
 
 	const Collidable = __webpack_require__(2)
 	
-	const Canvas = document.getElementById('canvas');
+	const Canvas = document.getElementById('myCanvas');
 	
 	class Asteroid extends Collidable {
 	  constructor (params) {
