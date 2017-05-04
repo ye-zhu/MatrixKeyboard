@@ -43,8 +43,8 @@ class Game {
    }
 
   makeLargeAsteroid () {
-    for (let i=0; i < this.numberAsteroids ; i++) {
-      let asteroid = new Asteroid ({
+    for (var i=0; i < this.numberAsteroids ; i++) {
+      var asteroid = new Asteroid ({
         direction: [-1, -1],
         vector: [2, 2],
         radius: 60,
@@ -59,8 +59,8 @@ class Game {
   }
 
   makeSmallAsteroid (pos) {
-    for (let i=0; i < 4 ; i++) {
-      let asteroid = new Asteroid ({
+    for (var i=0; i < 4 ; i++) {
+      var asteroid = new Asteroid ({
         position: pos,
         direction: [-1, -1],
         vector: [2, 2],
@@ -76,7 +76,7 @@ class Game {
   }
 
   makeExplosion (asteroid) {
-    let explosion = new Explosion ({
+    var explosion = new Explosion ({
       position: asteroid.position,
       direction: asteroid.direction,
       vector: [asteroid.vector[0]/4, asteroid.vector[1]/4],
@@ -89,7 +89,7 @@ class Game {
   }
 
   makeWarp (asteroid) {
-    let explosion = new Explosion ({
+    var explosion = new Explosion ({
       position: asteroid.position,
       direction: asteroid.direction,
       vector: [asteroid.vector[0]/4, asteroid.vector[1]/4],
