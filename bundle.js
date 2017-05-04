@@ -21956,7 +21956,7 @@
 	        _react2.default.createElement(
 	          'marquee',
 	          { id: 'introMarquee', behavior: 'scroll', direction: 'left' },
-	          'ask the matrix. hover over the keys to channel its reponse. space = new word. clearscreen sentence = new phrase. '
+	          'ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen sentence = new phrase. '
 	        ),
 	        _react2.default.createElement(
 	          'div',

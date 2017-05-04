@@ -284,7 +284,7 @@ class Keyboard extends React.Component {
 
     return (
       <div className="keyboard">
-        <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix. hover over the keys to channel its reponse. space = new word. clearscreen sentence = new phrase. </marquee>
+        <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen sentence = new phrase. </marquee>
 
         <div id="textArea" className = "textArea" >
           <div className = "bodyText">{this.state.text}</div>
