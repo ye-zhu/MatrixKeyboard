@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Game = __webpack_require__(1)
 	const Images = __webpack_require__(3)
@@ -68,9 +68,9 @@
 	context.fillText("LOADING...", canvas.width/2 - 50, canvas.height/2);
 
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Collidable = __webpack_require__(2)
 	const Ship = __webpack_require__(5)
@@ -317,9 +317,9 @@
 	module.exports = Game;
 
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Images = __webpack_require__(3)
 	const ImageSpec = __webpack_require__(4)
@@ -456,9 +456,9 @@
 	module.exports = Collidable;
 
 
-/***/ },
+/***/ }),
 /* 3 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	const IMAGES = [
 	  'explosion',
@@ -508,9 +508,9 @@
 	module.exports = Images
 
 
-/***/ },
+/***/ }),
 /* 4 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	const ImageSpec = {
 	
@@ -626,9 +626,9 @@
 	module.exports = ImageSpec
 
 
-/***/ },
+/***/ }),
 /* 5 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Collidable = __webpack_require__(2)
 	const Bullet = __webpack_require__(6)
@@ -799,9 +799,9 @@
 	module.exports = Ship;
 
 
-/***/ },
+/***/ }),
 /* 6 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Collidable = __webpack_require__(2)
 	
@@ -823,9 +823,9 @@
 	module.exports = Bullet
 
 
-/***/ },
+/***/ }),
 /* 7 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Collidable = __webpack_require__(2)
 	
@@ -872,9 +872,9 @@
 	module.exports = Asteroid
 
 
-/***/ },
+/***/ }),
 /* 8 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Collidable = __webpack_require__(2)
 	
@@ -889,9 +889,9 @@
 	module.exports = Explosion
 
 
-/***/ },
+/***/ }),
 /* 9 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	const Images = __webpack_require__(3)
 	const context = undefined
@@ -970,6 +970,6 @@
 	module.exports = Description
 
 
-/***/ }
+/***/ })
 /******/ ]);
 //# sourceMappingURL=bundle.js.map
