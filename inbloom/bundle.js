@@ -58,7 +58,7 @@
 	
 	
 	
-	let startGame = function () {
+	var startGame = function () {
 	    new Game({
 	    context:context
 	  })
