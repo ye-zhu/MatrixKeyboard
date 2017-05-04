@@ -47,9 +47,8 @@
 	const Game = __webpack_require__(1)
 	const Images = __webpack_require__(3)
 	
-	
-	let canvas = document.getElementById('myCanvas');
-	let context = canvas.getContext('2d');
+	var canvas = document.getElementById('canvas');
+	var context = canvas.getContext('2d');
 	
 	canvas.width = document.body.clientWidth;
 	canvas.height = document.body.clientHeight;
@@ -830,7 +829,7 @@
 
 	const Collidable = __webpack_require__(2)
 	
-	const Canvas = document.getElementById('myCanvas');
+	const Canvas = document.getElementById('canvas');
 	
 	class Asteroid extends Collidable {
 	  constructor (params) {

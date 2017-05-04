@@ -1,9 +1,8 @@
 const Game = require('./game.js')
 const Images = require('./images.js')
 
-
-let canvas = document.getElementById('myCanvas');
-let context = canvas.getContext('2d');
+var canvas = document.getElementById('canvas');
+var context = canvas.getContext('2d');
 
 canvas.width = document.body.clientWidth;
 canvas.height = document.body.clientHeight;
