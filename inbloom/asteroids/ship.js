@@ -126,7 +126,7 @@ class Ship extends Collidable {
 
       } else if (e.keyCode === 80) {
         e.preventDefault();
-        location.reload();
+        window.location.reload();
       }
 
 

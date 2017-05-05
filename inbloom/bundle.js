@@ -466,7 +466,6 @@
 	  'ship',
 	  'bullet',
 	  'warp',
-	  'asteroidintro'
 	]
 	
 	const LOADING_STATUS = {
@@ -758,7 +757,7 @@
 	
 	      } else if (e.keyCode === 80) {
 	        e.preventDefault();
-	        location.reload();
+	        window.location.reload();
 	      }
 	
 	
