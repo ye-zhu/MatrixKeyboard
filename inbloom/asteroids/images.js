@@ -3,7 +3,7 @@ const IMAGES = [
   'asteroid',
   'ship',
   'bullet',
-  'warp',
+  'warp'
 ]
 
 const LOADING_STATUS = {
