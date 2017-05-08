@@ -18,6 +18,7 @@ class Game {
     this.numberAsteroids = 2;
     this.score = 0;
     this.running = true;
+    this.clearScreen = false;
     this.makeShip();
     this.makeLargeAsteroid();
     this.setGameIntoMotion();
@@ -136,7 +137,10 @@ class Game {
   }
 
   clear () {
-    this.context.clearRect(0, 0, canvas.width, canvas.height);
+    if (this.clearScreen) {
+      this.context.clearRect(0, 0, canvas.width, canvas.height);
+      this.clearScreen = false
+    }
   }
 
 
@@ -221,7 +225,7 @@ class Game {
   // }
 
   animateFrame () {
-    // this.clear();
+    this.clear();
     // this.localStorageScore();
     this.concatAll();
     this.beforeMoveAll();

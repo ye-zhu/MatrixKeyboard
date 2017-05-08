@@ -126,7 +126,7 @@ class Ship extends Collidable {
 
       } else if (e.keyCode === 80) {
         e.preventDefault();
-        window.location.reload();
+        this.game.clearScreen = true
       }
 
 

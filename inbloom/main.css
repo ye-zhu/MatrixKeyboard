@@ -1,9 +1,14 @@
+html {
+  height: 100%;
+}
+
 body {
   background-image: url("asteroids/assets/mulilabyrinthlg.jpg");
   background-repeat: repeat;
   background-size: 100%;
   margin: 0 auto;
   -webkit-animation: backgroundScroll 2000s linear infinite;
+  min-height: 100%;
 }
 
 @-webkit-keyframes backgroundScroll {
