@@ -21726,7 +21726,7 @@
 	        } else {
 	          this.setClearscreenTimer();
 	        }
-	      }.bind(this), randomTime() * 30);
+	      }.bind(this), randomTime() * 35);
 	    }
 	  }, {
 	    key: 'pushNamesToDictionary',
@@ -21970,7 +21970,7 @@
 	        _react2.default.createElement(
 	          'marquee',
 	          { id: 'introMarquee', behavior: 'scroll', direction: 'left' },
-	          'ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen sentence = new phrase. '
+	          'ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen = new phrase. '
 	        ),
 	        _react2.default.createElement(
 	          'div',
