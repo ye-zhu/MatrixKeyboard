@@ -21681,6 +21681,20 @@
 	  }
 
 	  _createClass(Keyboard, [{
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.state = {
+	        text: '',
+	        bottomText: [],
+	        currentWord: undefined,
+	        mouseOver: false,
+	        addPlayerBox: false,
+	        clickTimer: undefined,
+	        form: {},
+	        players: this.props.players
+	      };
+	    }
+	  }, {
 	    key: 'setClickTimer',
 	    value: function setClickTimer() {
 	      setTimeout(function () {
@@ -22169,13 +22183,13 @@
 	  }
 
 	  _createClass(IntroView, [{
-	    key: 'componentDidMount',
-	    value: function componentDidMount() {
-	      var _this2 = this;
-
-	      this.unsubscribe = _store2.default.subscribe(function () {
-	        _this2.setState({ players: _store2.default.getPlayers() });
-	      });
+	    key: 'componentWillUnmount',
+	    value: function componentWillUnmount() {
+	      this.state = {
+	        text: "",
+	        players: undefined,
+	        form: {}
+	      };
 	    }
 	  }, {
 	    key: 'updateForm',

@@ -29,6 +29,19 @@ class Keyboard extends React.Component {
     this.textToSpeech()
 }
 
+componentWillUnmount () {
+  this.state = {
+    text:'',
+    bottomText:[],
+    currentWord: undefined,
+    mouseOver: false,
+    addPlayerBox: false,
+    clickTimer: undefined,
+    form: {},
+    players: this.props.players
+  }
+}
+
   setClickTimer () {
       setTimeout(function(){
         if (this.state.mouseOver) {

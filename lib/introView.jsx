@@ -12,13 +12,13 @@ class IntroView extends React.Component {
     }
 }
 
-componentDidMount() {
-  this.unsubscribe = Store.subscribe(() => {
-    this.setState({players: Store.getPlayers()})
-  })
+componentWillUnmount () {
+  this.state = {
+    text: "",
+    players:undefined,
+    form: {}
+  }
 }
-
-
 
 updateForm(field) {
   let self = this
