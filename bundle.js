@@ -87,7 +87,7 @@
 	    _this.state = {
 	      voice: ['Zosia'],
 	      players: [],
-	      loggedIn: false
+	      loggedIn: true
 	    };
 	    return _this;
 	  }
@@ -21968,11 +21968,6 @@
 	        'div',
 	        { className: 'keyboard' },
 	        _react2.default.createElement(
-	          'marquee',
-	          { id: 'introMarquee', behavior: 'scroll', direction: 'left' },
-	          'ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen = new phrase. '
-	        ),
-	        _react2.default.createElement(
 	          'div',
 	          { id: 'textArea', className: 'textArea' },
 	          _react2.default.createElement(
@@ -21997,6 +21992,9 @@
 
 	  return Keyboard;
 	}(_react2.default.Component);
+
+	// <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen = new phrase. </marquee>
+
 
 	exports.default = Keyboard;
 

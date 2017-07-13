@@ -297,7 +297,6 @@ componentWillUnmount () {
 
     return (
       <div className="keyboard">
-        <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen = new phrase. </marquee>
 
         <div id="textArea" className = "textArea" >
           <div className = "bodyText">{this.state.text}</div>
@@ -318,6 +317,7 @@ componentWillUnmount () {
 }
 
 
+// <marquee id="introMarquee" behavior="scroll" direction="left">ask the matrix. hover over the keys to channel its knowledge. space = new word. clearscreen = new phrase. </marquee>
 
 
 export default Keyboard
